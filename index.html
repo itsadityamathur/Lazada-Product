@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazada Deals – Best Affiliate Store</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Header */
+        .header {
+            background: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Search Bar */
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-box {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff5722;
+            border-radius: 5px;
+        }
+
+        /* Product Grid */
+        .container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product a {
+            display: inline-block;
+            text-decoration: none;
+            background: #ff5722;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product a:hover {
+            background: #e64a19;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        Lazada Best Deals – Shop & Save Now!
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-box" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+
+    <!-- Products -->
+    <div class="container" id="productContainer">
+        <div class="product">
+            <img src="https://placehold.co/300x200" alt="Product 1">
+            <h3>Product Name 1</h3>
+            <p>Best deal for you!</p>
+            <a href="YOUR_LAZADA_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/300x200" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Grab this offer today!</p>
+            <a href="YOUR_LAZADA_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/300x200" alt="Product 3">
+            <h3>Product Name 3</h3>
+            <p>Limited-time discount!</p>
+            <a href="YOUR_LAZADA_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/300x200" alt="Product 4">
+            <h3>Product Name 4</h3>
+            <p>Shop now before it's gone!</p>
+            <a href="YOUR_LAZADA_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 Lazada Affiliate Store | Earn Commission on Every Purchase!
+    </div>
+
+    <!-- JavaScript for Search Function -->
+    <script>
+        function searchProducts() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let products = document.getElementsByClassName('product');
+
+            for (let i = 0; i < products.length; i++) {
+                let title = products[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    products[i].style.display = 'block';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
